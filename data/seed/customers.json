@@ -1,0 +1,269 @@
+[
+  {
+    "customer_id": "cust-001",
+    "name": "Alice Johnson",
+    "email": "alice.johnson@techstartup.io",
+    "plan": "pro",
+    "status": "active",
+    "seats_used": 8,
+    "seats_limit": 20,
+    "storage_used_gb": 12.4,
+    "created_at": "2024-03-15",
+    "billing_cycle": "monthly",
+    "monthly_rate_usd": 232.0,
+    "integrations_enabled": [
+      "slack",
+      "api"
+    ],
+    "workspace_name": "TechStartup"
+  },
+  {
+    "customer_id": "cust-002",
+    "name": "Bob Smith",
+    "email": "bob.smith@gmail.com",
+    "plan": "free",
+    "status": "active",
+    "seats_used": 1,
+    "seats_limit": 3,
+    "storage_used_gb": 0.8,
+    "created_at": "2024-06-01",
+    "billing_cycle": null,
+    "monthly_rate_usd": 0,
+    "integrations_enabled": [],
+    "workspace_name": "Bob's Workspace"
+  },
+  {
+    "customer_id": "cust-003",
+    "name": "Carol Davis",
+    "email": "carol.davis@megacorp.com",
+    "plan": "enterprise",
+    "status": "active",
+    "seats_used": 145,
+    "seats_limit": null,
+    "storage_used_gb": 489.2,
+    "created_at": "2023-11-20",
+    "billing_cycle": "annual",
+    "monthly_rate_usd": 8500.0,
+    "integrations_enabled": [
+      "slack",
+      "api",
+      "sso",
+      "scim",
+      "webhooks"
+    ],
+    "workspace_name": "MegaCorp Support"
+  },
+  {
+    "customer_id": "cust-004",
+    "name": "David Park",
+    "email": "david.park@designco.com",
+    "plan": "pro",
+    "status": "active",
+    "seats_used": 5,
+    "seats_limit": 20,
+    "storage_used_gb": 7.1,
+    "created_at": "2024-01-10",
+    "billing_cycle": "annual",
+    "monthly_rate_usd": 145.0,
+    "integrations_enabled": [
+      "slack"
+    ],
+    "workspace_name": "DesignCo"
+  },
+  {
+    "customer_id": "cust-005",
+    "name": "Emily Chen",
+    "email": "emily.chen@freelance.me",
+    "plan": "pro",
+    "status": "past_due",
+    "seats_used": 2,
+    "seats_limit": 20,
+    "storage_used_gb": 3.3,
+    "created_at": "2024-04-22",
+    "billing_cycle": "monthly",
+    "monthly_rate_usd": 58.0,
+    "integrations_enabled": [
+      "api"
+    ],
+    "workspace_name": "Emily Freelance"
+  },
+  {
+    "customer_id": "cust-006",
+    "name": "Frank Martinez",
+    "email": "frank.martinez@agency.co",
+    "plan": "pro",
+    "status": "active",
+    "seats_used": 19,
+    "seats_limit": 20,
+    "storage_used_gb": 41.7,
+    "created_at": "2023-09-05",
+    "billing_cycle": "monthly",
+    "monthly_rate_usd": 551.0,
+    "integrations_enabled": [
+      "slack",
+      "api"
+    ],
+    "workspace_name": "Martinez Agency"
+  },
+  {
+    "customer_id": "cust-007",
+    "name": "Grace Kim",
+    "email": "grace.kim@enterprise-solutions.com",
+    "plan": "enterprise",
+    "status": "active",
+    "seats_used": 72,
+    "seats_limit": null,
+    "storage_used_gb": 215.6,
+    "created_at": "2024-02-14",
+    "billing_cycle": "annual",
+    "monthly_rate_usd": 5200.0,
+    "integrations_enabled": [
+      "slack",
+      "api",
+      "sso",
+      "webhooks"
+    ],
+    "workspace_name": "EntSolutions Global"
+  },
+  {
+    "customer_id": "cust-008",
+    "name": "Henry Williams",
+    "email": "henry.w@smallbiz.org",
+    "plan": "free",
+    "status": "active",
+    "seats_used": 3,
+    "seats_limit": 3,
+    "storage_used_gb": 1.9,
+    "created_at": "2024-08-30",
+    "billing_cycle": null,
+    "monthly_rate_usd": 0,
+    "integrations_enabled": [],
+    "workspace_name": "SmallBiz Team"
+  },
+  {
+    "customer_id": "cust-009",
+    "name": "Irene Nakamura",
+    "email": "irene.nakamura@healthtech.io",
+    "plan": "enterprise",
+    "status": "active",
+    "seats_used": 310,
+    "seats_limit": null,
+    "storage_used_gb": 1024.5,
+    "created_at": "2023-06-12",
+    "billing_cycle": "annual",
+    "monthly_rate_usd": 15000.0,
+    "integrations_enabled": [
+      "slack",
+      "api",
+      "sso",
+      "scim",
+      "webhooks",
+      "custom"
+    ],
+    "workspace_name": "HealthTech Platform"
+  },
+  {
+    "customer_id": "cust-010",
+    "name": "James O'Brien",
+    "email": "james.obrien@consulting.co",
+    "plan": "pro",
+    "status": "cancelled",
+    "seats_used": 0,
+    "seats_limit": 20,
+    "storage_used_gb": 5.4,
+    "created_at": "2024-05-18",
+    "billing_cycle": "monthly",
+    "monthly_rate_usd": 0,
+    "integrations_enabled": [],
+    "workspace_name": "O'Brien Consulting"
+  },
+  {
+    "customer_id": "cust-011",
+    "name": "Karen Liu",
+    "email": "karen.liu@edtech.edu",
+    "plan": "pro",
+    "status": "active",
+    "seats_used": 12,
+    "seats_limit": 20,
+    "storage_used_gb": 18.9,
+    "created_at": "2024-07-03",
+    "billing_cycle": "annual",
+    "monthly_rate_usd": 348.0,
+    "integrations_enabled": [
+      "slack",
+      "api"
+    ],
+    "workspace_name": "EdTech Academy"
+  },
+  {
+    "customer_id": "cust-012",
+    "name": "Leo Fernandez",
+    "email": "leo@fernandez.dev",
+    "plan": "free",
+    "status": "active",
+    "seats_used": 1,
+    "seats_limit": 3,
+    "storage_used_gb": 0.2,
+    "created_at": "2025-01-05",
+    "billing_cycle": null,
+    "monthly_rate_usd": 0,
+    "integrations_enabled": [],
+    "workspace_name": "Leo's Projects"
+  },
+  {
+    "customer_id": "cust-013",
+    "name": "Monica Patel",
+    "email": "monica.patel@finserv.com",
+    "plan": "enterprise",
+    "status": "suspended",
+    "seats_used": 55,
+    "seats_limit": null,
+    "storage_used_gb": 167.3,
+    "created_at": "2023-12-01",
+    "billing_cycle": "annual",
+    "monthly_rate_usd": 4800.0,
+    "integrations_enabled": [
+      "slack",
+      "api",
+      "sso",
+      "scim"
+    ],
+    "workspace_name": "FinServ Support Hub"
+  },
+  {
+    "customer_id": "cust-014",
+    "name": "Nathan Brooks",
+    "email": "nathan.brooks@startup.xyz",
+    "plan": "pro",
+    "status": "trialing",
+    "seats_used": 4,
+    "seats_limit": 20,
+    "storage_used_gb": 1.1,
+    "created_at": "2025-01-20",
+    "billing_cycle": "monthly",
+    "monthly_rate_usd": 116.0,
+    "integrations_enabled": [
+      "slack"
+    ],
+    "workspace_name": "Startup XYZ",
+    "trial_ends_at": "2025-02-20"
+  },
+  {
+    "customer_id": "cust-015",
+    "name": "Olivia Rossi",
+    "email": "olivia.rossi@retailbrand.com",
+    "plan": "pro",
+    "status": "active",
+    "seats_used": 15,
+    "seats_limit": 20,
+    "storage_used_gb": 28.6,
+    "created_at": "2024-09-11",
+    "billing_cycle": "monthly",
+    "monthly_rate_usd": 435.0,
+    "integrations_enabled": [
+      "slack",
+      "api"
+    ],
+    "workspace_name": "RetailBrand CX"
+  }
+]

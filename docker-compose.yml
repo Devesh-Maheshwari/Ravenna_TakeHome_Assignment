@@ -1,0 +1,26 @@
+# Postgres only. The API runs locally under uvicorn (`make run`) so there is no
+# rebuild-on-every-edit loop during development. See docs/DESIGN_DECISIONS.md.
+services:
+  db:
+    # pgvector image rather than plain postgres:17 — costs nothing and gives us
+    # the vector column for hybrid knowledge-base search.
+    image: pgvector/pgvector:pg17
+    container_name: ravenna_support_agent_db
+    environment:
+      POSTGRES_USER: support
+      POSTGRES_PASSWORD: support
+      POSTGRES_DB: support_agent
+    ports:
+      # 5434 on the host so a locally installed Postgres on 5432, and the
+      # LiveInterview project's Postgres on 5433, do not clash.
+      - "5434:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U support -d support_agent"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  pgdata:

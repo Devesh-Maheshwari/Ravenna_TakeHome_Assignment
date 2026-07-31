@@ -1,0 +1,336 @@
+[
+  {
+    "ticket_id": "TK-001",
+    "customer_question": "How do I reset my password?",
+    "support_agent_response": "You can reset your password by going to the login page and clicking 'Forgot Password.' Enter the email address associated with your account and you'll receive a reset link within a few minutes. The link expires after 24 hours. If you don't see the email, check your spam folder.",
+    "tags": [
+      "password",
+      "reset",
+      "login",
+      "authentication"
+    ],
+    "resolution_type": "self-service",
+    "category": "account-access"
+  },
+  {
+    "ticket_id": "TK-002",
+    "customer_question": "Can I upgrade my subscription plan?",
+    "support_agent_response": "Yes! You can upgrade your plan at any time by going to Settings > Billing > Change Plan. When you upgrade mid-cycle, you'll be charged a prorated amount for the remainder of your current billing period. Your new features will be available immediately after upgrading.",
+    "tags": [
+      "subscription",
+      "upgrade",
+      "billing",
+      "plan"
+    ],
+    "resolution_type": "self-service",
+    "category": "billing"
+  },
+  {
+    "ticket_id": "TK-003",
+    "customer_question": "What is your refund policy?",
+    "support_agent_response": "We offer a full refund within 30 days of purchase, no questions asked. After 30 days, refunds are evaluated on a case-by-case basis. Annual plans are eligible for a prorated refund if cancelled within the first 90 days. To request a refund, contact our billing team or submit a request through Settings > Billing > Request Refund.",
+    "tags": [
+      "refund",
+      "policy",
+      "billing",
+      "cancellation"
+    ],
+    "resolution_type": "informational",
+    "category": "billing"
+  },
+  {
+    "ticket_id": "TK-004",
+    "customer_question": "My payment was charged twice for this month",
+    "support_agent_response": "I'm sorry about the duplicate charge. I've escalated this to our billing team and they will review your account within 1-2 business days. If a duplicate charge is confirmed, the refund will be processed automatically and should appear on your statement within 5-7 business days. You'll receive an email confirmation once the refund is issued.",
+    "tags": [
+      "billing",
+      "payment",
+      "duplicate-charge",
+      "escalation"
+    ],
+    "resolution_type": "escalated",
+    "category": "billing"
+  },
+  {
+    "ticket_id": "TK-005",
+    "customer_question": "The app crashes when I try to export my data to CSV",
+    "support_agent_response": "This is a known issue that our engineering team is actively working on. The bug affects CSV exports for datasets larger than 10,000 rows. As a workaround, you can try exporting in smaller batches by applying date filters. We expect a fix to be deployed within the next two weeks. I've added you to the notification list so you'll be emailed when the fix goes live.",
+    "tags": [
+      "bug",
+      "export",
+      "csv",
+      "known-issue",
+      "crash"
+    ],
+    "resolution_type": "escalated",
+    "category": "technical"
+  },
+  {
+    "ticket_id": "TK-006",
+    "customer_question": "How do I add another user to my team account?",
+    "support_agent_response": "To add a team member, go to Settings > Team > Invite Member. Enter their email address and select their role (Admin, Editor, or Viewer). They'll receive an invitation email and can join your workspace once they accept. Note that the Free plan supports up to 3 users, Pro supports up to 20, and Enterprise has unlimited seats.",
+    "tags": [
+      "team",
+      "invite",
+      "users",
+      "seats",
+      "permissions"
+    ],
+    "resolution_type": "self-service",
+    "category": "account-management"
+  },
+  {
+    "ticket_id": "TK-007",
+    "customer_question": "I'm not receiving any email notifications from the platform",
+    "support_agent_response": "First, check your notification preferences under Settings > Notifications to make sure they're enabled. Also verify that emails from notifications@ravenna.com aren't being caught by your spam filter. If your settings look correct and the emails aren't in spam, try removing and re-adding your email address under Settings > Profile. If the issue persists after these steps, let us know and we'll investigate further on our end.",
+    "tags": [
+      "email",
+      "notifications",
+      "settings",
+      "spam"
+    ],
+    "resolution_type": "self-service",
+    "category": "technical"
+  },
+  {
+    "ticket_id": "TK-008",
+    "customer_question": "Can I connect Ravenna to Slack?",
+    "support_agent_response": "Yes, we have a native Slack integration! Go to Settings > Integrations > Slack and click 'Connect.' You'll be prompted to authorize the connection in your Slack workspace. Once connected, you can configure which notifications get sent to Slack and choose specific channels. This feature is available on Pro and Enterprise plans.",
+    "tags": [
+      "integration",
+      "slack",
+      "connect",
+      "notifications"
+    ],
+    "resolution_type": "self-service",
+    "category": "integrations"
+  },
+  {
+    "ticket_id": "TK-009",
+    "customer_question": "How do I cancel my subscription?",
+    "support_agent_response": "You can cancel your subscription by going to Settings > Billing > Cancel Subscription. Your access will continue until the end of your current billing period. After cancellation, your data is retained for 90 days in case you decide to reactivate. If you're on an annual plan and within the first 90 days, you may be eligible for a prorated refund.",
+    "tags": [
+      "cancel",
+      "subscription",
+      "billing",
+      "retention"
+    ],
+    "resolution_type": "self-service",
+    "category": "billing"
+  },
+  {
+    "ticket_id": "TK-010",
+    "customer_question": "The dashboard is loading very slowly, sometimes it takes over a minute",
+    "support_agent_response": "We're sorry about the slow performance. A few things to try: clear your browser cache, disable any browser extensions, and try using Chrome or Firefox if you aren't already. If you have a large number of widgets on your dashboard (more than 15), try removing some to improve load times. If the issue continues, please let us know your browser version and we can investigate whether there's a specific performance issue with your account.",
+    "tags": [
+      "performance",
+      "slow",
+      "dashboard",
+      "loading"
+    ],
+    "resolution_type": "self-service",
+    "category": "technical"
+  },
+  {
+    "ticket_id": "TK-011",
+    "customer_question": "I accidentally deleted a project, can I get it back?",
+    "support_agent_response": "Deleted projects are moved to your Trash and retained for 30 days. Go to Settings > Trash to find and restore your project. If more than 30 days have passed, the data may be permanently deleted. For Enterprise customers, we maintain extended backups and may be able to recover data up to 90 days after deletion. Contact us with the project name and approximate deletion date and we'll look into it.",
+    "tags": [
+      "deleted",
+      "recovery",
+      "trash",
+      "restore",
+      "data"
+    ],
+    "resolution_type": "self-service",
+    "category": "account-management"
+  },
+  {
+    "ticket_id": "TK-012",
+    "customer_question": "What's the difference between Pro and Enterprise plans?",
+    "support_agent_response": "The Pro plan ($29/user/month) includes up to 20 team members, all integrations, priority email support, and 50GB storage. The Enterprise plan (custom pricing) includes unlimited team members, advanced security features (SSO, SCIM, audit logs), a dedicated account manager, 99.9% SLA, custom integrations, and unlimited storage. Enterprise also includes phone support and onboarding assistance. Visit our pricing page at ravenna.com/pricing for a full comparison.",
+    "tags": [
+      "pricing",
+      "plans",
+      "pro",
+      "enterprise",
+      "comparison"
+    ],
+    "resolution_type": "informational",
+    "category": "billing"
+  },
+  {
+    "ticket_id": "TK-013",
+    "customer_question": "Is there an API I can use to integrate with our internal tools?",
+    "support_agent_response": "Yes, we offer a REST API on Pro and Enterprise plans. You can generate API keys under Settings > Developer > API Keys. Our API documentation is available at docs.ravenna.com/api and includes endpoints for managing projects, users, tickets, and data exports. Rate limits are 100 requests/minute for Pro and 500 requests/minute for Enterprise. If you need higher limits, reach out and we can discuss a custom plan.",
+    "tags": [
+      "api",
+      "developer",
+      "integration",
+      "documentation"
+    ],
+    "resolution_type": "informational",
+    "category": "integrations"
+  },
+  {
+    "ticket_id": "TK-014",
+    "customer_question": "I'm getting a 403 Forbidden error when I try to access my workspace",
+    "support_agent_response": "A 403 error usually means your account permissions have changed. This can happen if a workspace admin modified your role or if your account was suspended due to a billing issue. Check with your workspace admin to confirm your access level. If you're the admin, verify your subscription is active under Settings > Billing. If everything looks correct and you still can't access the workspace, let us know and we'll investigate.",
+    "tags": [
+      "error",
+      "403",
+      "forbidden",
+      "access",
+      "permissions"
+    ],
+    "resolution_type": "self-service",
+    "category": "account-access"
+  },
+  {
+    "ticket_id": "TK-015",
+    "customer_question": "Can I enable two-factor authentication on my account?",
+    "support_agent_response": "Absolutely. Go to Settings > Security > Two-Factor Authentication and click 'Enable.' You can choose between an authenticator app (recommended) or SMS verification. Once enabled, you'll need to enter a verification code each time you log in. We also recommend saving your backup recovery codes in a safe place in case you lose access to your 2FA device.",
+    "tags": [
+      "2fa",
+      "security",
+      "authentication",
+      "two-factor"
+    ],
+    "resolution_type": "self-service",
+    "category": "account-access"
+  },
+  {
+    "ticket_id": "TK-016",
+    "customer_question": "How do I transfer ownership of a workspace to another user?",
+    "support_agent_response": "To transfer workspace ownership, go to Settings > Team > Members, find the user you want to make the new owner, click the three-dot menu next to their name, and select 'Transfer Ownership.' The new owner must already be an Admin on the workspace. You'll need to confirm the transfer with your password. After the transfer, you'll be downgraded to an Admin role.",
+    "tags": [
+      "ownership",
+      "transfer",
+      "workspace",
+      "admin"
+    ],
+    "resolution_type": "self-service",
+    "category": "account-management"
+  },
+  {
+    "ticket_id": "TK-017",
+    "customer_question": "My SSO login isn't working after our IT team changed our identity provider",
+    "support_agent_response": "When your identity provider configuration changes, the SSO connection in Ravenna needs to be updated as well. Your workspace admin will need to go to Settings > Security > SSO and update the metadata URL or upload the new metadata XML file. If the admin is locked out too, we can temporarily enable password-based login for the admin account. Please have your IT team send us the new IdP metadata and we'll help get this resolved.",
+    "tags": [
+      "sso",
+      "login",
+      "identity-provider",
+      "authentication",
+      "enterprise"
+    ],
+    "resolution_type": "escalated",
+    "category": "account-access"
+  },
+  {
+    "ticket_id": "TK-018",
+    "customer_question": "I want to export all of our data before we close our account",
+    "support_agent_response": "You can export all your data by going to Settings > Account > Export Data. This generates a ZIP file containing all your projects, tickets, user data, and attachments in JSON and CSV formats. The export can take up to 24 hours for large accounts. Once it's ready, you'll receive a download link via email. The download link is valid for 7 days. We recommend completing the export before initiating account closure.",
+    "tags": [
+      "export",
+      "data",
+      "download",
+      "account-closure"
+    ],
+    "resolution_type": "self-service",
+    "category": "account-management"
+  },
+  {
+    "ticket_id": "TK-019",
+    "customer_question": "We need an invoice for our last three months of payments for our finance team",
+    "support_agent_response": "You can download invoices directly from Settings > Billing > Invoice History. Each invoice is available as a PDF. If you need invoices for a specific date range, use the filter options at the top of the page. If you need a consolidated invoice or a custom format for your finance team, let us know and we can generate one for you. Enterprise customers can also set up automatic invoice forwarding to a finance email address.",
+    "tags": [
+      "invoice",
+      "billing",
+      "finance",
+      "payment-history"
+    ],
+    "resolution_type": "self-service",
+    "category": "billing"
+  },
+  {
+    "ticket_id": "TK-020",
+    "customer_question": "The search feature isn't returning any results even though I know the content exists",
+    "support_agent_response": "Our search index occasionally needs time to catch up after large imports or bulk edits. If you recently added content, wait about 15 minutes and try again. Also make sure you're searching in the correct workspace and project scope (check the search filters at the top). If the problem persists, try rebuilding the search index by going to Settings > Advanced > Rebuild Search Index. This process takes a few minutes depending on your data size.",
+    "tags": [
+      "search",
+      "index",
+      "bug",
+      "no-results"
+    ],
+    "resolution_type": "self-service",
+    "category": "technical"
+  },
+  {
+    "ticket_id": "TK-021",
+    "customer_question": "Can I set up automated workflows or triggers?",
+    "support_agent_response": "Yes, we support automated workflows on Pro and Enterprise plans. Go to Settings > Automation > Create Workflow. You can set triggers based on events like 'new ticket created,' 'status changed,' or 'SLA breach approaching,' and configure actions like assigning to a team member, sending a notification, or updating a field. Enterprise customers also have access to webhook-based triggers for custom integrations.",
+    "tags": [
+      "automation",
+      "workflows",
+      "triggers",
+      "rules"
+    ],
+    "resolution_type": "informational",
+    "category": "features"
+  },
+  {
+    "ticket_id": "TK-022",
+    "customer_question": "One of our team members left the company and we need to reassign their tickets",
+    "support_agent_response": "Go to Settings > Team > Members, find the former team member, and click 'Deactivate.' You'll be prompted to reassign their open tickets to another team member. You can also do a bulk reassignment by going to the Tickets view, filtering by assignee, selecting all, and using 'Bulk Actions > Reassign.' Deactivated users no longer count toward your seat limit but their historical activity is preserved.",
+    "tags": [
+      "deactivate",
+      "user",
+      "reassign",
+      "tickets",
+      "offboarding"
+    ],
+    "resolution_type": "self-service",
+    "category": "account-management"
+  },
+  {
+    "ticket_id": "TK-023",
+    "customer_question": "Is our data encrypted? We need to fill out a security questionnaire for compliance",
+    "support_agent_response": "Yes, all data is encrypted both in transit (TLS 1.2+) and at rest (AES-256). We are SOC 2 Type II certified and GDPR compliant. Our infrastructure runs on AWS with data centers in the US and EU. Enterprise customers can select their preferred data residency region. For security questionnaires, we have a pre-filled CAIQ (Consensus Assessment Initiative Questionnaire) and can provide our SOC 2 report under NDA. Contact security@ravenna.com to request these documents.",
+    "tags": [
+      "security",
+      "encryption",
+      "compliance",
+      "soc2",
+      "gdpr"
+    ],
+    "resolution_type": "informational",
+    "category": "security"
+  },
+  {
+    "ticket_id": "TK-024",
+    "customer_question": "I'm seeing an error that says 'rate limit exceeded' when using the API",
+    "support_agent_response": "The rate limit error means you've exceeded the allowed number of API requests per minute. Pro plans are limited to 100 requests/minute and Enterprise plans to 500 requests/minute. To fix this, implement exponential backoff in your API client and consider caching frequently accessed data. You can monitor your API usage under Settings > Developer > Usage Dashboard. If you consistently need higher limits, contact us about a custom rate limit increase.",
+    "tags": [
+      "api",
+      "rate-limit",
+      "error",
+      "developer"
+    ],
+    "resolution_type": "self-service",
+    "category": "technical"
+  },
+  {
+    "ticket_id": "TK-025",
+    "customer_question": "We need to comply with a data deletion request from a customer under GDPR",
+    "support_agent_response": "To process a GDPR data deletion request, go to Settings > Privacy > Data Requests > New Request. Enter the email address of the individual and select 'Right to Erasure.' The system will identify all personal data associated with that email across your workspace. You'll see a preview before confirming the deletion. The process is irreversible and completed within 72 hours. A confirmation report is generated for your compliance records. Enterprise customers can also set up automated data retention policies.",
+    "tags": [
+      "gdpr",
+      "data-deletion",
+      "privacy",
+      "compliance",
+      "right-to-erasure"
+    ],
+    "resolution_type": "self-service",
+    "category": "security"
+  }
+]

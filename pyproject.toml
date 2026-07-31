@@ -1,0 +1,57 @@
+[project]
+name = "support-agent"
+version = "0.1.0"
+description = "Agentic customer support assistant API with a bounded tool-calling loop"
+requires-python = ">=3.12"
+
+dependencies = [
+    # API
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.32",
+    "pydantic>=2.9",
+    "pydantic-settings>=2.6",
+    # Agent
+    "langgraph>=0.2.50",
+    "langgraph-checkpoint-postgres>=2.0.2",
+    "langchain-core>=0.3.20",
+    "langchain-openai>=0.2.10",
+    # Database — psycopg3 pool; also compatible with the optional checkpointer
+    "psycopg[binary,pool]>=3.2",
+    # Observability
+    "structlog>=24.4",
+    "prometheus-client>=0.21",
+    # UI + scripts
+    "streamlit>=1.40",
+    "httpx>=0.27",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3",
+    "pytest-asyncio>=0.24",
+    "ruff>=0.8",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/support_agent"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = [".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+# Stubs raise NotImplementedError with unused args by design.
+ignore = ["B008"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+markers = [
+    "llm: hits a real LLM provider; deselect with -m 'not llm'",
+]

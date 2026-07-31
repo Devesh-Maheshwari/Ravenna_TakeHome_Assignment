@@ -1,0 +1,103 @@
+# Multi-turn evaluation scenarios.
+#
+# Data, not code, so adding a case is a few lines of YAML rather than a new test
+# function. Each scenario is a conversation; each turn carries expectations about
+# the *behaviour* — which tools fired, whether escalation happened — rather than
+# the wording, which is not stable enough to assert on.
+#
+# `expect_tools` means "exactly these, in any order". `expect_no_tools` asserts
+# the agent answered from context. Both matter: over-calling tools is as much a
+# defect as under-calling them.
+
+scenarios:
+  - id: worked_example
+    description: >
+      The conversation from the problem statement. Exercises a vague opener, an
+      account lookup, a mid-conversation topic shift, ticket creation on
+      confirmation, and the return to the parked topic.
+    seed_customer: cust-002        # Bob Smith, free plan
+    turns:
+      - customer: "Hi, I need help with my Raven account"
+        expect_no_tools: true
+        expect_clarifying_question: true
+        note: >
+          Too vague to act on. The agent should ask what they need rather than
+          guessing or calling a tool with nothing to go on.
+
+      - customer: "I think I'm on the free plan but I want to upgrade"
+        expect_tools: [lookup_customer]
+        note: Account-specific — cannot be answered from the knowledge base.
+
+      - customer: "Actually, before that, the export feature hasn't been working for me. Is that a known issue?"
+        expect_tools: [search_knowledge_base]
+        expect_kb_article: TK-005
+        expect_deferred_topic: true
+        note: >
+          Topic shift. The agent answers the new question and parks the upgrade
+          intent instead of dropping it.
+
+      - customer: "Yes please"
+        expect_tools: [create_ticket]
+        expect_ticket_created: true
+        expect_returns_to_deferred_topic: true
+        note: >
+          The assertion that matters most. Filing the ticket is ordinary; coming
+          back to the abandoned upgrade thread unprompted is what distinguishes a
+          session-aware agent from a stateless question answerer.
+
+  - id: answers_from_context
+    description: A follow-up must not re-run a lookup whose answer is already known.
+    seed_customer: cust-001
+    turns:
+      - customer: "What plan am I on? My email is alice.johnson@techstartup.io"
+        expect_tools: [lookup_customer]
+      - customer: "And how many seats does that give me?"
+        expect_no_tools: true
+        note: >
+          Established in the previous turn. Re-calling lookup_customer here is a
+          defect — it burns a round trip and signals the agent is not using its
+          own context.
+
+  - id: tool_chaining
+    description: One question that genuinely needs two tools.
+    seed_customer: cust-002
+    turns:
+      - customer: "Can I connect Slack? My email is bob.smith@gmail.com"
+        expect_tools: [lookup_customer, search_knowledge_base]
+        note: >
+          TK-008 says Slack is Pro and Enterprise only, so the correct answer
+          depends on the plan. Retrieval alone gives a generic answer; lookup
+          alone cannot describe the integration. This is what chaining is for.
+
+  - id: ambiguous_identity
+    description: A name matching several accounts must produce a question, not a guess.
+    turns:
+      - customer: "Hi, this is Smith, can you look up my account?"
+        expect_ambiguous_result: true
+        expect_clarifying_question: true
+        expect_no_account_disclosed: true
+
+  - id: escalation_on_request
+    description: An explicit request for a human is honoured immediately.
+    turns:
+      - customer: "I was charged twice this month and I want to speak to a person"
+        expect_tools: [escalate_to_human]
+        expect_escalated: true
+        note: TK-004 covers duplicate charges, but the customer asked for a human.
+
+  - id: escalation_no_answer
+    description: The knowledge base has nothing relevant; the agent should not invent one.
+    turns:
+      - customer: "Does your platform support HIPAA BAAs for our clinical trial data?"
+        expect_low_retrieval_score: true
+        expect_escalated_or_offers_ticket: true
+        note: >
+          Not covered by any of the 25 articles. Paraphrasing the nearest match
+          (TK-023, general security) confidently would be the failure mode.
+
+  - id: expired_session
+    description: Posting into a lapsed session is rejected, not silently revived.
+    expire_before_turn: 1
+    turns:
+      - customer: "Are you still there?"
+        expect_http_status: 409
